@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">TechnicalTest</string>
+    <string name="error_disconnect">Tidak dapat terhubung, check koneksi anda</string>
+    <string name="error_default">Terjadi kesalahan, coba lagi</string>
+    <string name="str_movie_notfound">Film Tidak Ada</string>
+    <string name="str_rating">Rating</string>
+    <string name="str_release">Release</string>
+    <string name="str_popularity">Popularity</string>
+    <string name="str_genre">Genre</string>
+    <string name="str_play_movie">Durasi</string>
+    <string name="str_rating_age">Rating Usia</string>
+    <string name="str_reviewer">Review :</string>
+    <string name="str_no_review_yet">No Review Yet</string>
+</resources>

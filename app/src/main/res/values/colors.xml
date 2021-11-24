@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary">#61C7B5</color>
+    <color name="darker">#3E8CB9</color>
+    <color name="lighter">#87CDE9</color>
+    <color name="subtle">#D6EDF6</color>
+
+    <color name="red">#ED2323</color>
+    <color name="redDark">#D12B2B</color>
+    <color name="redLight">#FF5C5C</color>
+    <color name="redLighter">#FF8080</color>
+
+    <color name="blue">#3868B0</color>
+    <color name="blueDark">#2C528B</color>
+    <color name="blueLight">#5B8AD0</color>
+    <color name="blueLighter">#9DBFF9</color>
+    <color name="blueDarker">#3E8CB9</color>
+
+    <color name="yellow">#FACC14</color>
+    <color name="yellowDark">#E5B800</color>
+    <color name="yellowLight">#FDDD48</color>
+    <color name="yellowLighter">#FDED72</color>
+
+    <color name="green">#06C270</color>
+    <color name="greenDark">#05A660</color>
+    <color name="greenLight">#39D98A</color>
+    <color name="greenLighter">#57EBA1</color>
+
+    <color name="grayDark1">#3A3A3C</color>
+    <color name="grayDark2">#6B7588</color>
+    <color name="grayDark3">#8F90A6</color>
+    <color name="grayDark4">#C7C9D9</color>
+    <color name="darkerGray5">#333333</color>
+
+    <color name="grayLight1">#DDE5E9</color>
+    <color name="grayLight2">#EBEBF0</color>
+    <color name="grayLight3">#F2F2F5</color>
+    <color name="grayLight4">#FAFAFC</color>
+    <color name="greyLight5">#E5E5E5</color>
+</resources>

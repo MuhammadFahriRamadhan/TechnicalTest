@@ -1,0 +1,138 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+}
+
+apply from: '../deps.gradle'
+
+def localProperties = new Properties()
+localProperties.load(new FileInputStream(rootProject.file("gradle.properties")))
+
+android {
+    compileSdk 30
+
+    defaultConfig {
+        applicationId "com.example.technicaltest"
+        minSdk 24
+        targetSdk 30
+        versionCode 1
+        versionName "1.0"
+
+        buildConfigField "String", "BASE_URL_API", localProperties['base_api_url']
+        buildConfigField "String", "BASE_API_KEY", localProperties['base_api_key']
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+
+        // Export local db schema into json file
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+    kapt {
+        generateStubs = true
+    }
+
+}
+
+dependencies {
+
+    implementation kotlin.stdlib
+    implementation androidX.appCompatX
+    implementation androidX.coreKtx
+
+    implementation androidX.recyclerX
+    implementation androidX.cardX
+    implementation androidX.activityExt
+    implementation androidX.fragmentKtx
+    implementation androidX.constraintLayout
+    implementation androidX.lifecycleCommon
+    implementation androidX.lifecycleExtensions
+    implementation androidX.material
+    implementation androidX.swipeLayout
+
+    // network
+    implementation libraries.okhttpLogging
+    implementation libraries.stetho
+    implementation libraries.stethoOkhttp
+    implementation libraries.retrofit
+    implementation libraries.retrofitGson
+    implementation libraries.rxJavaAdapter
+
+    // rxjava
+    implementation libraries.rxJava
+    implementation libraries.rxAndroid
+    implementation libraries.rxBinding
+
+    // image
+    implementation libraries.glide
+    implementation libraries.glideOkhttp
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    kapt libraries.glideCompiler
+
+
+
+    // DI
+    implementation libraries.dagger
+    implementation libraries.daggerSupport
+    kapt libraries.daggerCompiler
+    kapt libraries.daggerProcessor
+
+    // ui
+    implementation libraries.sdp
+    implementation libraries.ssp
+    implementation libraries.fastAdapter
+    implementation libraries.fastAdapterViewBinding
+    implementation libraries.fastAdapterScroll
+    implementation libraries.fastAdapterUtils
+    implementation libraries.fasAdapterExpandable
+    implementation libraries.otpView
+    implementation libraries.flexBox
+    implementation libraries.circleImage
+
+
+    // log
+    implementation libraries.timber
+
+
+    implementation libraries.lottie
+
+    implementation('io.socket:socket.io-client:2.0.1') {
+        exclude group: 'org.json', module: 'json'
+    }
+
+
+    // Unit Test
+    testImplementation testLibraries.junit
+    testImplementation testLibraries.mockito
+
+    // Android Testing Support Library's runner and rules
+    androidTestImplementation testLibraries.junitRunner
+    androidTestImplementation testLibraries.espressoCore
+}
