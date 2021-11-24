@@ -19,7 +19,7 @@
             android:layout_height="@dimen/_40sdp"
             android:layout_gravity="center"
             app:lottie_autoPlay="true"
-            app:lottie_fileName="movie_lottie.json"
+            app:lottie_fileName="loading_movie.json"
             app:lottie_loop="true"
             app:lottie_repeatMode="restart" />
 
